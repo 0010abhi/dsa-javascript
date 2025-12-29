@@ -32,6 +32,25 @@
         }
     }
 
+    // breadth or level first search traversal
+    function levelOrderItr(root) {
+        let res = [];
+        let queue = [];
+
+        queue.push(root.data);
+
+        while(root.data) {
+
+        }
+
+    }
+
+    function levelOrderRec(root) {
+        
+    }
+
+
+    // height of binary tree
     function height(root) {
         if (root === null) {
             return 0;
