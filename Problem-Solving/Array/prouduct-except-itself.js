@@ -1,20 +1,20 @@
 // My Solution
-var productExceptSelf = function(nums) {
+var productExceptSelf = function (nums) {
     let productArr = Array(nums.length).fill(1);
     let product = 1;
     let zeroIndex = [];
-    for(let i =0; i< nums.length; i++) {
-        if(nums[i] !== 0) {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== 0) {
             product *= nums[i];
         } else {
             zeroIndex.push(i);
         }
     }
 
-    for(let i =0; i < nums.length; i++) {
-        if(zeroIndex.length > 0) {
-            if(zeroIndex.length === 1) {
-                if(zeroIndex.indexOf(i) > -1) {
+    for (let i = 0; i < nums.length; i++) {
+        if (zeroIndex.length > 0) {
+            if (zeroIndex.length === 1) {
+                if (zeroIndex.indexOf(i) > -1) {
                     productArr[i] = product;
                 } else {
                     productArr[i] = 0;
@@ -28,12 +28,12 @@ var productExceptSelf = function(nums) {
     }
 
     return productArr;
-    
+
 };
 
 
 // optimised for O(1) space
-var productExceptSelf = function(nums) {
+var productExceptSelf = function (nums) {
     const n = nums.length;
     const productArr = Array(n).fill(1);
 
@@ -67,4 +67,7 @@ Output: [0,0,9,0,0]
 
 Input: nums = [-1,1,0,-3,0, 3]
 Output: [0,0,0,0,0,0]
+
+Input: nums = [1, 2, 0, 4]
+Output: [0,0,8,0]
  */
